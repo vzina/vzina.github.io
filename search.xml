@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>ubuntu 18.04开发环境配置</title>
+      <link href="/2020/07/06/ubuntu-18-04-kai-fa-huan-jing-pei-zhi/"/>
+      <url>/2020/07/06/ubuntu-18-04-kai-fa-huan-jing-pei-zhi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="ubuntu-18-04开发环境配置"><a href="#ubuntu-18-04开发环境配置" class="headerlink" title="ubuntu 18.04开发环境配置"></a>ubuntu 18.04开发环境配置</h1><h3 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h3><pre class=" language-shell"><code class="language-shell"># 切换阿里云的源地址sudo mv /etc/apt/sources.list /etc/apt/sources.list.bak# 编辑源文件sudo vi /etc/apt/sources.list# 复制下面内容到文件中# deb-src http://cn.archive.ubuntu.com/ubuntu bionic-security multiverse# deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable# deb-src [arch=amd64] https://download.docker.com/linux/ubuntu bionic stabledeb http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiversedeb http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiversedeb http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiversedeb http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiversedeb http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiversedeb-src http://mirrors.aliyun.com/ubuntu/ bionic main restricted universe multiversedeb-src http://mirrors.aliyun.com/ubuntu/ bionic-security main restricted universe multiversedeb-src http://mirrors.aliyun.com/ubuntu/ bionic-updates main restricted universe multiversedeb-src http://mirrors.aliyun.com/ubuntu/ bionic-proposed main restricted universe multiversedeb-src http://mirrors.aliyun.com/ubuntu/ bionic-backports main restricted universe multiverse# 保存退出vi# 更新ubuntu源sudo apt-get update# 安装编译工具sudo apt-get install -y autoconf cmake automake gcc g++ make tcl-dev expect git# 修改sudo后不需要密码1. 执行 sudo visudo2. 然后末尾添加，yeweijian为当前用户名    yeweijian   ALL=(ALL:ALL) NOPASSWD: ALL3. 保存退出，重新连接</code></pre><ol><li>zsh配置（可选）<pre><code># 安装zshsudo apt-get install -y zshzsh --version</code></pre></li></ol><h1 id="将-ZSH-设置为当前登录用户的默认-Shell"><a href="#将-ZSH-设置为当前登录用户的默认-Shell" class="headerlink" title="将 ZSH 设置为当前登录用户的默认 Shell"></a>将 ZSH 设置为当前登录用户的默认 Shell</h1><p>sudo chsh -s /usr/bin/zsh</p><h1 id="安装「Oh-My-ZSH」"><a href="#安装「Oh-My-ZSH」" class="headerlink" title="安装「Oh My ZSH」"></a>安装「Oh My ZSH」</h1><p>sh -c “$(wget <a href="https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh" target="_blank" rel="noopener">https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh</a> -O -)”</p><h1 id="手动安装"><a href="#手动安装" class="headerlink" title="手动安装"></a>手动安装</h1><h1 id="从git上把oh-my-zsh-clone下来到根目录下"><a href="#从git上把oh-my-zsh-clone下来到根目录下" class="headerlink" title="从git上把oh-my-zsh clone下来到根目录下"></a>从git上把oh-my-zsh clone下来到根目录下</h1><p>git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh</p><h1 id="再在根目录下copy一份-zshrc配置"><a href="#再在根目录下copy一份-zshrc配置" class="headerlink" title="再在根目录下copy一份.zshrc配置"></a>再在根目录下copy一份.zshrc配置</h1><p>cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc</p><h1 id="语法高亮显示插件"><a href="#语法高亮显示插件" class="headerlink" title="语法高亮显示插件"></a>语法高亮显示插件</h1><p>sudo apt-get install zsh-syntax-highlighting<br>git clone <a href="https://github.com/zsh-users/zsh-syntax-highlighting.git" target="_blank" rel="noopener">https://github.com/zsh-users/zsh-syntax-highlighting.git</a> ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting<br>echo “source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh” &gt;&gt; ~/.zshrc</p><h1 id="命令提示"><a href="#命令提示" class="headerlink" title="命令提示"></a>命令提示</h1><p>git clone <a href="https://github.com/zsh-users/zsh-autosuggestions" target="_blank" rel="noopener">https://github.com/zsh-users/zsh-autosuggestions</a> ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions</p><h1 id="开启插件"><a href="#开启插件" class="headerlink" title="开启插件"></a>开启插件</h1><p>vi ~/.zshrc</p><h1 id="修改：plugins-git-zsh-syntax-highlighting-zsh-autosuggestions-sudo-z"><a href="#修改：plugins-git-zsh-syntax-highlighting-zsh-autosuggestions-sudo-z" class="headerlink" title="修改：plugins=(git zsh-syntax-highlighting zsh-autosuggestions sudo z)"></a>修改：plugins=(git zsh-syntax-highlighting zsh-autosuggestions sudo z)</h1><h1 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h1><h1 id="git卡顿现象，全局解决办法"><a href="#git卡顿现象，全局解决办法" class="headerlink" title="git卡顿现象，全局解决办法:"></a>git卡顿现象，全局解决办法:</h1><h1 id="在-oh-my-zsh-custom-文件夹中加入一个自定义脚本，以-zsh-作为后缀名，比如：-oh-my-zsh-custom-disable-git-info-zsh"><a href="#在-oh-my-zsh-custom-文件夹中加入一个自定义脚本，以-zsh-作为后缀名，比如：-oh-my-zsh-custom-disable-git-info-zsh" class="headerlink" title="在 /.oh-my-zsh/custom/ 文件夹中加入一个自定义脚本，以 .zsh 作为后缀名，比如：/.oh-my-zsh/custom/disable_git_info.zsh."></a>在 <del>/.oh-my-zsh/custom/ 文件夹中加入一个自定义脚本，以 .zsh 作为后缀名，比如：</del>/.oh-my-zsh/custom/disable_git_info.zsh.</h1><p>vi ~/.oh-my-zsh/custom/disable_git_info.zsh</p><p>function git_prompt_info() {<br>    ref=$(git symbolic-ref HEAD 2&gt; /dev/null) || return<br>    echo “$ZSH_THEME_GIT_PROMPT_PREFIX${ref#refs/heads/}${ZSH_THEME_GIT_PROMPT_CLEAN}${ZSH_THEME_GIT_PROMPT_SUFFIX}”<br>}</p><pre><code>2. 配置rc-local.service```shell# 创建启动脚本sudo touch /etc/rc.local &amp;&amp; sudo chmod +x /etc/rc.localsudo ln -s /lib/systemd/system/rc-local.service /etc/systemd/systemsudo systemctl enable rc-local.servicesudo systemctl start rc-local.servicesudo systemctl status rc-local.service</code></pre><ol start="3"><li>磁盘共享（虚拟机可以直接使用共享）</li></ol><pre class=" language-shell"><code class="language-shell">方式一# windows 创建用户win键+R，然后输入：control userpasswords2添加用户 --> 本地用户username=yewjpassword=123456# windows 设置密码不过期高级-->高级用户管理-->高级，即可看到本地用户和组# windows 共享目录1). 确保文件和打印机共享功能已经被打开。 1). 如果你想要共享特定的文件夹，那么就要将该功能设置为开启状态。 ...2). 找到你想要共享的文件夹。 ...3). 选择“共享”选项。 ...4). 点击“特定用户”选项来选择你想要分享给的特定用户。 ...5). 对列表中的用户的权限进行设定。 ...6). 点击共享按钮。# ubuntu 挂载共享目录sudo mkdir -p /mnt/datasudo mount -o username=yewj,password=123456,uid=1000,gid=1000,dir_mode=0777,file_mode=0777 //192.168.216.1/data /mnt/data# ubuntu 开机自动挂载sudo -S mount -o username=yewj,password=123456,uid=1000,gid=1000,dir_mode=0777,file_mode=0777 //192.168.216.1/data /mnt/data <<EOFpasswordEOF方式二第一步.通过VMware安装VMware Tools第二步.设置共享文件夹第三步.前两步就不说了，这一步发现/mnt/hgfs下没有设置的共享文件夹。之前在ubuntu16，需要安装open-vm-dkms。但在ubuntu18.04，apt搜不到，结果换了各种软件源也没有。后来发现不需要装。以下是ubuntu18.04解决步骤。    1.执行，看是否能找到共享文件夹，如果有继续。        vmware-hgfsclient    2.继续执行 （注意中间的空格）        vmhgfs-fuse .host:/ /mnt/hgfs    3.步骤2如果出现chown: changing ownership of 'hgfs/': Operation not permitted，是因为/mnt/hgfs权限为dr-xr-xr-x。此时        sudo chmod 777 /mnt/hgfs    ，重新执行步骤2。    4.以上配置，重启后失效，若要开机自动挂载。需配置/etc/fstab文件        sudo vi /etc/fstab        在文件最后加上        .host:/ /mnt/hgfs   fuse.vmhgfs-fuse    allow_other 0   0        重启前最好先sudo mount -a测试下是否可以，避免出错开不了机</code></pre><ol start="4"><li>配置SSH服务(正常情况下不需要手动配置)</li></ol><p>修改配置文件 <code>sudo vi /etc/ssh/sshd_config</code></p><pre><code>Port 22222 # 端口号，防冲突可修改PasswordAuthentication yes # 使用密码登录</code></pre><p>启动服务 <code>sudo service ssh restart</code></p><h3 id="php安装"><a href="#php安装" class="headerlink" title="php安装"></a>php安装</h3><ol><li>添加安装源</li></ol><pre class=" language-shell"><code class="language-shell">sudo add-apt-repository ppa:ondrej/phpsudo apt-get update</code></pre><ol start="2"><li>安装多版本</li></ol><pre class=" language-shell"><code class="language-shell"># 安装5.6版本sudo apt-get -y install php5.6 php5.6-common php5.6-dev php5.6-fpm# 安装7.3版本sudo apt-get -y install php7.3 php7.3-common php7.3-dev php7.3-xml php7.3-fpm# 安装7.4版本sudo apt-get -y install php7.4 php7.4-common php7.4-dev php7.4-xml php7.4-curl php7.4-gd php7.4-mbstring php7.4-mysql php7.4-fpm# 扩展安装sudo apt-get -y install php5.6-mysql php7.3-mysql php7.3-xml php7.3-curl php7.3-mbstring# 或者sudo pecl install libevent-0.1.0</code></pre><ol start="3"><li>版本切换</li></ol><pre class=" language-shell"><code class="language-shell"># 列表选择php版本sudo update-alternatives --config php# 设置默认php-config版本sudo update-alternatives --set php-config /usr/bin/php-config7.3</code></pre><h3 id="多网卡配置"><a href="#多网卡配置" class="headerlink" title="多网卡配置"></a>多网卡配置</h3><pre><code>sudo vi /etc/netplan/50-cloud-init.yaml# Let NetworkManager manage all devices on this systemnetwork:  version: 2  renderer: NetworkManager  ethernets:    ens33: #配置的网卡名称,使用ifconfig -a查看得到,且必须是空格缩进，netplan只认空格      dhcp4: no #no-dhcp4开启 true-dhcp4开启      dhcp6: true #true-dhcp6开启 no-dhcp6关闭      addresses: [192.168.223.129/24, ] #设置本机IP及掩码,这个逗号和空格好像不能少，少了就不生效，后面的空格之后可以写入IPv6的地址，从而变成这样[192.168.2.110/24, &quot;2001:1::1/64&quot;]      gateway4: 192.168.223.1 #设置ipv4的默认网关      gateway6: 2001:1::1 #设置ipv6的默认网关      nameservers:  #设置DNS服务器       addresses: [8.8.8.8,8.8.8.4]  #多个DNS服务器之间用逗号隔开</code></pre><p>参考链接：<a href="https://blog.csdn.net/lengye7/article/details/88889807" target="_blank" rel="noopener">@see</a></p><h3 id="其它应用"><a href="#其它应用" class="headerlink" title="其它应用"></a>其它应用</h3><pre class=" language-shell"><code class="language-shell"># 推荐安装方式sudo apt-get install -y nginx mysql-client mysql-server redis memcached</code></pre><h3 id="便捷脚本"><a href="#便捷脚本" class="headerlink" title="便捷脚本"></a>便捷脚本</h3><ul><li>以下脚本仅适用于本文档设置的开发环境。</li></ul><h5 id="php扩展安装脚本"><a href="#php扩展安装脚本" class="headerlink" title="php扩展安装脚本"></a>php扩展安装脚本</h5><pre class=" language-shell"><code class="language-shell">#!/bin/bash## 用法：bash 脚本名 扩展名，如：bash /path/to/phpextutil swoole#set -xPHP_BIN="/usr/bin/env php"PHP_VERSION=$($PHP_BIN -r "echo substr(PHP_VERSION, 0, 3);")if [ ! -n "$1" ]; then  echo "extension name is empty!"  exit 1fiEXTENSION_NAME=$1 # full nameREAL_EXTENSION_NAME=${EXTENSION_NAME%-*} # real namePHP_EXTENSION_DIR=$($PHP_BIN -r "echo PHP_EXTENSION_DIR;")# install extensionif [ ! -f "$PHP_EXTENSION_DIR/$REAL_EXTENSION_NAME.so" ]; then  sudo pecl channel-update pecl.php.net  sudo pecl -q install -o -f $EXTENSION_NAME  if [ ! $? = 0 ]; then    exit 1  fifiPHP_CONFIG_FILE_SCAN_DIR_CLI=$($PHP_BIN -r "echo PHP_CONFIG_FILE_SCAN_DIR;")PHP_CONFIG_FILE_SCAN_DIR_FPM="/etc/php/$PHP_VERSION/fpm/conf.d"PHP_CONFIG_FILE_SCAN_DIR_SRC="/etc/php/$PHP_VERSION/mods-available"EXTENSION_FILE="20-$REAL_EXTENSION_NAME.ini"if [[ -f "$PHP_CONFIG_FILE_SCAN_DIR_SRC/$EXTENSION_FILE" && -d "$PHP_CONFIG_FILE_SCAN_DIR_FPM" && ! -f "$PHP_CONFIG_FILE_SCAN_DIR_FPM/$EXTENSION_FILE" ]]; then  sudo ln -s "$PHP_CONFIG_FILE_SCAN_DIR_SRC/$EXTENSION_FILE" "$PHP_CONFIG_FILE_SCAN_DIR_FPM/."  echo "$PHP_CONFIG_FILE_SCAN_DIR_FPM/$EXTENSION_FILE"  exit 0fiif [ -f "$PHP_CONFIG_FILE_SCAN_DIR_CLI/$EXTENSION_FILE" ]; then  echo "extension [$REAL_EXTENSION_NAME] is exist!"  echo "Modify the content, please edit this file: $PHP_CONFIG_FILE_SCAN_DIR_SRC/$EXTENSION_FILE"  exit 2fiTMP_FILE="/tmp/$EXTENSION_FILE"touch $TMP_FILEecho "; configuration for php common module" > $TMP_FILEecho "; priority=20" >> $TMP_FILEecho "extension=$REAL_EXTENSION_NAME.so" >> $TMP_FILEsudo mv $TMP_FILE $PHP_CONFIG_FILE_SCAN_DIR_SRCsudo ln -s "$PHP_CONFIG_FILE_SCAN_DIR_SRC/$EXTENSION_FILE" "$PHP_CONFIG_FILE_SCAN_DIR_CLI/."echo "$PHP_CONFIG_FILE_SCAN_DIR_SRC/$EXTENSION_FILE"echo "$PHP_CONFIG_FILE_SCAN_DIR_CLI/$EXTENSION_FILE"if [[ -d "$PHP_CONFIG_FILE_SCAN_DIR_FPM" ]]; then  sudo ln -s "$PHP_CONFIG_FILE_SCAN_DIR_SRC/$EXTENSION_FILE" "$PHP_CONFIG_FILE_SCAN_DIR_FPM/."  echo "$PHP_CONFIG_FILE_SCAN_DIR_FPM/$EXTENSION_FILE"fiexit 0</code></pre><h5 id="快速切换版本"><a href="#快速切换版本" class="headerlink" title="快速切换版本"></a>快速切换版本</h5><pre class=" language-shell"><code class="language-shell">#!/usr/bin/env bash## 用法：bash 脚本名 扩展名，如：bash /path/to/phpevcutil#sudo update-alternatives --config phpPHP_BIN="/usr/bin/env php"PHP_VERSION=$($PHP_BIN -r "echo substr(PHP_VERSION, 0, 3);")sudo update-alternatives --set php-config "/usr/bin/php-config$PHP_VERSION"sudo update-alternatives --set phpize "/usr/bin/phpize$PHP_VERSION"</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> linux </tag>
+            
+            <tag> ubuntu </tag>
+            
+            <tag> php </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Windows开机启动WSL2（Ubuntu）的启动项</title>
+      <link href="/2020/07/06/windows-kai-ji-qi-dong-wsl2-ubuntu-de-qi-dong-xiang/"/>
+      <url>/2020/07/06/windows-kai-ji-qi-dong-wsl2-ubuntu-de-qi-dong-xiang/</url>
+      
+        <content type="html"><![CDATA[<h2 id="1-在Ubuntu里执行："><a href="#1-在Ubuntu里执行：" class="headerlink" title="1. 在Ubuntu里执行："></a>1. 在Ubuntu里执行：</h2><pre><code>sudo vim /etc/init.wsl</code></pre><h2 id="2-按-i-输入："><a href="#2-按-i-输入：" class="headerlink" title="2. 按 i 输入："></a>2. 按 i 输入：</h2><pre><code>#!/bin/sh/etc/init.d/redis-server start/etc/init.d/mysql start/etc/init.d/php-fpm start/etc/init.d/nginx start</code></pre><p>保存退出</p><h2 id="3-授权"><a href="#3-授权" class="headerlink" title="3. 授权"></a>3. 授权</h2><pre><code>sudo chmod +x /etc/init.wsl</code></pre><h2 id="4-在Windows创建txt，输入："><a href="#4-在Windows创建txt，输入：" class="headerlink" title="4. 在Windows创建txt，输入："></a>4. 在Windows创建txt，输入：</h2><pre><code>Set ws = WScript.CreateObject(&quot;WScript.Shell&quot;)ws.run &quot;wsl -d ubuntu -u root /etc/init.wsl&quot;</code></pre><h2 id="5-给txt重命名成："><a href="#5-给txt重命名成：" class="headerlink" title="5. 给txt重命名成："></a>5. 给txt重命名成：</h2><p><code>linux-start.vbs</code> 记得给.txt也去掉</p><h2 id="6-按-win-R-输入-shell-startup-把刚刚那个vbs文件放进来"><a href="#6-按-win-R-输入-shell-startup-把刚刚那个vbs文件放进来" class="headerlink" title="6. 按 win+R 输入 shell:startup 把刚刚那个vbs文件放进来"></a>6. 按 <code>win+R</code> 输入 <code>shell:startup</code> 把刚刚那个vbs文件放进来</h2><h2 id="7-其它"><a href="#7-其它" class="headerlink" title="7. 其它"></a>7. 其它</h2><p>限制wsl内存使用大小</p><pre><code>[wsl2]memory=4GBswap=0localhostForwarding=true</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> ubuntu </tag>
+            
+            <tag> wsl </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>如何获取 docker 容器(container)的 ip 地址</title>
+      <link href="/2020/07/06/ru-he-huo-qu-docker-rong-qi-container-de-ip-di-zhi/"/>
+      <url>/2020/07/06/ru-he-huo-qu-docker-rong-qi-container-de-ip-di-zhi/</url>
+      
+        <content type="html"><![CDATA[<h4 id="1-进入容器内部后"><a href="#1-进入容器内部后" class="headerlink" title="1. 进入容器内部后"></a>1. 进入容器内部后</h4><pre class=" language-shell"><code class="language-shell">cat /etc/hosts</code></pre><p>会显示自己以及(– link)软连接的容器IP</p><h4 id="2-使用命令"><a href="#2-使用命令" class="headerlink" title="2.使用命令"></a>2.使用命令</h4><pre class=" language-shell"><code class="language-shell">docker inspect --format '{{ .NetworkSettings.IPAddress }}' <container-ID># 或:docker inspect <container id># 或:docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' container_name_or_id</code></pre><h4 id="3-可以考虑在-bashrc-中写一个-bash-函数："><a href="#3-可以考虑在-bashrc-中写一个-bash-函数：" class="headerlink" title="3.可以考虑在 ~/.bashrc 中写一个 bash 函数："></a>3.可以考虑在 ~/.bashrc 中写一个 bash 函数：</h4><pre class=" language-shell"><code class="language-shell">function docker_ip() {    sudo docker inspect --format '{{ .NetworkSettings.IPAddress }}' $1}source ~/.bashrc# 然后：$ docker_ip <container-ID></code></pre><h4 id="4-要获取所有容器名称及其IP地址只需一个命令。"><a href="#4-要获取所有容器名称及其IP地址只需一个命令。" class="headerlink" title="4.要获取所有容器名称及其IP地址只需一个命令。"></a>4.要获取所有容器名称及其IP地址只需一个命令。</h4><pre class=" language-shell"><code class="language-shell">docker inspect -f '{{.Name}} - {{.NetworkSettings.IPAddress }}' $(docker ps -aq)</code></pre><p>如果使用docker-compose命令将是：</p><pre class=" language-shell"><code class="language-shell">docker inspect -f '{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)</code></pre><h4 id="5-显示所有容器IP地址："><a href="#5-显示所有容器IP地址：" class="headerlink" title="5.显示所有容器IP地址："></a>5.显示所有容器IP地址：</h4><pre class=" language-shell"><code class="language-shell">docker inspect --format='{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' $(docker ps -aq)# 或：docker inspect --format='{{.Name}} - {{range .NetworkSettings.Networks}}{{.IPAddress}} {{end}}' $(docker ps -a|grep devdock|awk '{print $1}')</code></pre>]]></content>
+      
+      
+      <categories>
+          
+          <category> 工具 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> docker </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
