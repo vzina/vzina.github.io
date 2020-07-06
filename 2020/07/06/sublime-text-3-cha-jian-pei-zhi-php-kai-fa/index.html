@@ -1,0 +1,1548 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="sublime text 3 插件配置(PHP开发), php golang docker 宅">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>sublime text 3 插件配置(PHP开发) | Vzina</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Vzina</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Vzina</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">sublime text 3 插件配置(PHP开发)</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/php/">
+                                <span class="chip bg-color">php</span>
+                            </a>
+                        
+                            <a href="/tags/sublime/">
+                                <span class="chip bg-color">sublime</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                工具
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-07-06
+                </div>
+                
+
+                
+
+                
+
+                
+
+                
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="一、安装插件控制台"><a href="#一、安装插件控制台" class="headerlink" title="一、安装插件控制台"></a>一、安装插件控制台</h2><ul>
+<li>单击 Preferences &gt; Browse Packages…菜单</li>
+<li>浏览一个文件夹，然后进入Installed Packages文件夹</li>
+<li>下载软件包<a href="https://packagecontrol.io/Package%20Control.sublime-package" target="_blank" rel="noopener">Control.sublime-package</a>并将其复制到Installed Packages /目录中</li>
+<li>重新启动Sublime文本</li>
+</ul>
+<h2 id="二、插件列表"><a href="#二、插件列表" class="headerlink" title="二、插件列表"></a>二、插件列表</h2><ol>
+<li><code>ConvertToUTF8</code>: 格式转换。</li>
+<li><code>SublimeLinter</code>: 语法高亮。</li>
+<li><code>Emmet</code>:    前端专用。</li>
+<li><code>SideBarEnhancements</code> : 扩展了侧边栏中菜单选项的数量，从而提升你的工作效率。<a href="https://github.com/52fisher/SideBarEnhancements" target="_blank" rel="noopener">中文版</a></li>
+<li><code>SyncedSideBar</code>  自动在左边文件夹树中定位当前文件</li>
+<li><code>DocBlockr</code>：自动生成大块的注释，并且可以用tab在不同内容之间切换，很爽的。</li>
+<li><code>BracketHighlighter</code>：括弧高亮显示。</li>
+<li><code>AllAutocomplete</code>：Sublime自带的可以对当前文件中的变量和函数名进行自动提示，但是AllAutocomplete可以对打开的所有文件的变量名进行提示，增强版的代码自动提示符。</li>
+<li><code>AutoFileName</code>: 自动提示路径</li>
+<li><a href="https://github.com/erichard/SublimePHPCompanion.git" target="_blank" rel="noopener">PHP Companion</a>：php函数跳转工具</li>
+<li><code>Phpfmt</code> (php&gt;=7.0)：自动格式化代码，详细配置如下：</li>
+</ol>
+<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">"autocomplete"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"enable_auto_align"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"format_on_save"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"indent_with_space"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"passes"</span><span class="token operator">:</span>
+    <span class="token punctuation">[</span>
+        <span class="token string">"MergeElseIf"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"psr2"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"version"</span><span class="token operator">:</span> <span class="token number">4</span>
+<span class="token punctuation">}</span></code></pre>
+<ol start="12">
+<li><code>sublime-phpcs(windows)</code>：<a href="https://github.com/benmatselby/sublime-phpcs.git" target="_blank" rel="noopener">php语法检测工具</a>，</li>
+</ol>
+<ul>
+<li>第一步：下载<a href="https://github.com/benmatselby/sublime-phpcs" target="_blank" rel="noopener">php code sniffer插件安装包</a><br>解压安装包得到sublime-phpcs-master，把sublime-phpcs-master文件夹放到sublime安装目录下的Data/Packages/目录下；重启sublime, 打开Sublime Text 3-&gt;Preferences-&gt;Package Settings -&gt; Php Code Sniffer 证明插件安装成功；</li>
+<li>第二步：下载<a href="http://cs.sensiolabs.org/get/php-cs-fixer.phar" target="_blank" rel="noopener">php-cs-fixer.phar</a></li>
+<li>第三步：把php-cs-fixer.phar 放到你的 php.exe 安装目录；</li>
+<li>第四步：进入php安装目录，下载并安装<a href="http://pear.php.net/go-pear.phar" target="_blank" rel="noopener">pear</a></li>
+</ul>
+<pre class=" language-shell"><code class="language-shell">php go-pear.phar</code></pre>
+<ul>
+<li>第五步：安装PHP_CodeSniffer扩展,</li>
+</ul>
+<pre class=" language-shell"><code class="language-shell">#（默认安装方式即可）;
+pear install PHP_CodeSniffer
+# 检查是否安装成功(The installed coding standards are MySource, PEAR, PHPCS, PSR1, PSR2, Squiz and Zend)
+phpcs -i</code></pre>
+<ul>
+<li>第六步：修改配置。</li>
+</ul>
+<pre><code>{
+    // We want debugging on
+    &quot;show_debug&quot;: true,
+
+    // Only execute the plugin for php files
+    &quot;extensions_to_execute&quot;: [&quot;php&quot;],
+
+    // Do not execute for twig files
+    &quot;extensions_to_blacklist&quot;: [&quot;twig.php&quot;],
+
+    // Execute the sniffer on file save
+    &quot;phpcs_execute_on_save&quot;: true,
+
+    // Show the error list after save.
+    &quot;phpcs_show_errors_on_save&quot;: true,
+
+    // Show the errors in the gutter
+    &quot;phpcs_show_gutter_marks&quot;: true,
+
+    // Show outline for errors
+    &quot;phpcs_outline_for_errors&quot;: true,
+
+    // Show the errors in the status bar
+    &quot;phpcs_show_errors_in_status&quot;: true,
+
+    // Show the errors in the quick panel so you can then goto line
+    &quot;phpcs_show_quick_panel&quot;: true,
+
+    // Path to php on windows installation
+    // This is needed as we cannot run phars on windows, so we run it through php
+    &quot;phpcs_php_prefix_path&quot;: &quot;D:\\php\\php-7.0.7\\php.exe&quot;,
+
+    // We want the fixer to be run through the php application
+    &quot;phpcs_commands_to_php_prefix&quot;: [&quot;Fixer&quot;],
+
+
+    // PHP_CodeSniffer settings
+    // Yes, run the phpcs command
+    &quot;phpcs_sniffer_run&quot;: true,
+
+    // And execute it on save
+    &quot;phpcs_command_on_save&quot;: true,
+
+    // This is the path to the bat file when we installed PHP_CodeSniffer
+    &quot;phpcs_executable_path&quot;: &quot;D:\\php\\php-7.0.7\\phpcs.bat&quot;,
+
+    // I want to run the PSR2 standard, and ignore warnings
+    &quot;phpcs_additional_args&quot;: {
+        &quot;--standard&quot;: &quot;PSR2&quot;,
+        &quot;-n&quot;: &quot;&quot;
+    },
+
+
+    // PHP-CS-Fixer settings
+    // Don&#39;t want to auto fix issue with php-cs-fixer
+    &quot;php_cs_fixer_on_save&quot;: false,
+
+    // Show the quick panel
+    &quot;php_cs_fixer_show_quick_panel&quot;: true,
+
+    // The fixer phar file is stored here:
+    &quot;php_cs_fixer_executable_path&quot;: &quot;D:\\php\\php-7.0.7\\php-cs-fixer.phar&quot;,
+
+    // Additional arguments, run all levels of fixing
+    &quot;php_cs_fixer_additional_args&quot;: {
+        &quot;--level&quot;: &quot;all&quot;
+    },
+
+
+    // PHP Linter settings
+    // Yes, lets lint the files
+    &quot;phpcs_linter_run&quot;: true,
+
+    // And execute that on each file when saved (php only as per extensions_to_execute)
+    &quot;phpcs_linter_command_on_save&quot;: true,
+
+    // Path to php
+    &quot;phpcs_php_path&quot;: &quot;D:\\php\\php-7.0.7\\php.exe&quot;,
+
+    // This is the regex format of the errors
+    &quot;phpcs_linter_regex&quot;: &quot;(?P&lt;message&gt;.*) on line (?P&lt;line&gt;\\d+)&quot;,
+
+
+    // PHP Mess Detector settings
+    // Not turning on the mess detector here
+    &quot;phpmd_run&quot;: false,
+    &quot;phpmd_command_on_save&quot;: false,
+    &quot;phpmd_executable_path&quot;: &quot;&quot;,
+    &quot;phpmd_additional_args&quot;: {}
+}</code></pre><p>1、mac方式：</p>
+<pre class=" language-shell"><code class="language-shell"># 安装phpcs
+brew install php-code-sniffer
+# 安装php-cs-fixer
+brew install php-cs-fixer</code></pre>
+<p>2、mac配置：</p>
+<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
+    // We want debugging on
+    <span class="token property">"show_debug"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+    // Only execute the plugin for php files
+    <span class="token property">"extensions_to_execute"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"php"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+    // Do not execute for twig files
+    <span class="token property">"extensions_to_blacklist"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"twig.php"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+    // Execute the sniffer on file save
+    <span class="token property">"phpcs_execute_on_save"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+    // Show the error list after save.
+    <span class="token property">"phpcs_show_errors_on_save"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+    // Show the errors in the gutter
+    <span class="token property">"phpcs_show_gutter_marks"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+    // Show outline for errors
+    <span class="token property">"phpcs_outline_for_errors"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+    // Show the errors in the status bar
+    <span class="token property">"phpcs_show_errors_in_status"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+    // Show the errors in the quick panel so you can then goto line
+    <span class="token property">"phpcs_show_quick_panel"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+    // Path to php on windows installation
+    // This is needed as we cannot run phars on windows<span class="token punctuation">,</span> so we run it through php
+    <span class="token property">"phpcs_php_prefix_path"</span><span class="token operator">:</span> <span class="token string">"/usr/local/opt/php71/bin/php"</span><span class="token punctuation">,</span>
+
+    // We want the fixer to be run through the php application
+    <span class="token property">"phpcs_commands_to_php_prefix"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"Fixer"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+
+
+    // PHP_CodeSniffer settings
+    // Yes<span class="token punctuation">,</span> run the phpcs command
+    <span class="token property">"phpcs_sniffer_run"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+    // And execute it on save
+    <span class="token property">"phpcs_command_on_save"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+    // This is the path to the bat file when we installed PHP_CodeSniffer
+    <span class="token property">"phpcs_executable_path"</span><span class="token operator">:</span> <span class="token string">"/usr/local/opt/php-code-sniffer/bin/phpcs"</span><span class="token punctuation">,</span>
+
+    // I want to run the PSR2 standard<span class="token punctuation">,</span> and ignore warnings
+    <span class="token property">"phpcs_additional_args"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"--standard"</span><span class="token operator">:</span> <span class="token string">"PSR2"</span><span class="token punctuation">,</span>
+        <span class="token property">"-n"</span><span class="token operator">:</span> <span class="token string">""</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+
+    // PHP-CS-Fixer settings
+    // Don't want to auto fix issue with php-cs-fixer
+    <span class="token property">"php_cs_fixer_on_save"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+
+    // Show the quick panel
+    <span class="token property">"php_cs_fixer_show_quick_panel"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+    // The fixer phar file is stored here<span class="token operator">:</span>
+    <span class="token property">"php_cs_fixer_executable_path"</span><span class="token operator">:</span> <span class="token string">"/usr/local/opt/php-cs-fixer/bin/php-cs-fixer"</span><span class="token punctuation">,</span>
+
+    // Additional arguments<span class="token punctuation">,</span> run all levels of fixing
+    <span class="token property">"php_cs_fixer_additional_args"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+        <span class="token property">"--level"</span><span class="token operator">:</span> <span class="token string">"all"</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+
+
+    // PHP Linter settings
+    // Yes<span class="token punctuation">,</span> lets lint the files
+    <span class="token property">"phpcs_linter_run"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+    // And execute that on each file when saved (php only as per extensions_to_execute<span class="token punctuation">)</span>
+    <span class="token property">"phpcs_linter_command_on_save"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+
+    // Path to php
+    <span class="token property">"phpcs_php_path"</span><span class="token operator">:</span> <span class="token string">"/usr/local/opt/php71/bin/php"</span><span class="token punctuation">,</span>
+
+    // This is the regex format of the errors
+    <span class="token property">"phpcs_linter_regex"</span><span class="token operator">:</span> <span class="token string">"(?P&lt;message>.*) on line (?P&lt;line>\\d+)"</span><span class="token punctuation">,</span>
+
+
+    // PHP Mess Detector settings
+    // Not turning on the mess detector here
+    <span class="token property">"phpmd_run"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"phpmd_command_on_save"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"phpmd_executable_path"</span><span class="token operator">:</span> <span class="token string">""</span><span class="token punctuation">,</span>
+    <span class="token property">"phpmd_additional_args"</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h2 id="三、配置快捷键："><a href="#三、配置快捷键：" class="headerlink" title="三、配置快捷键："></a>三、配置快捷键：</h2><pre class=" language-json"><code class="language-json"><span class="token punctuation">[</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"keys"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">"f6"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"expand_fqcn"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"keys"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">"shift+f6"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"expand_fqcn"</span><span class="token punctuation">,</span>
+    <span class="token property">"args"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">"leading_separator"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"keys"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">"f5"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"find_use"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"keys"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">"f4"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"import_namespace"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"keys"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">"f3"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"implement"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"keys"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">"shift+f12"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"goto_definition_scope"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"keys"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">"f7"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"insert_php_constructor_property"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"keys"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">"alt+b"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"jump_back"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token punctuation">{</span>
+    <span class="token property">"keys"</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token string">"alt+shift+b"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"jump_forward"</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">]</span></code></pre>
+<ol start="12">
+<li><code>a file icon</code> 漂亮文件图标</li>
+</ol>
+<h2 id="四、个人使用配置："><a href="#四、个人使用配置：" class="headerlink" title="四、个人使用配置："></a>四、个人使用配置：</h2><pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
+    <span class="token property">"always_prompt_for_file_reload"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"always_show_minimap_viewport"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"animation_enabled"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"atomic_save"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"auto_close_tags"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"auto_complete"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"auto_complete_commit_on_tab"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"auto_complete_cycle"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"auto_complete_delay"</span><span class="token operator">:</span> <span class="token number">50</span><span class="token punctuation">,</span>
+    <span class="token property">"auto_complete_selector"</span><span class="token operator">:</span> <span class="token string">"source - comment, meta.tag - punctuation.definition.tag.begin"</span><span class="token punctuation">,</span>
+    <span class="token property">"auto_complete_size_limit"</span><span class="token operator">:</span> <span class="token number">4194304</span><span class="token punctuation">,</span>
+    <span class="token property">"auto_complete_triggers"</span><span class="token operator">:</span>
+    <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+            <span class="token property">"characters"</span><span class="token operator">:</span> <span class="token string">"&lt;"</span><span class="token punctuation">,</span>
+            <span class="token property">"selector"</span><span class="token operator">:</span> <span class="token string">"text.html"</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"auto_complete_with_fields"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"auto_find_in_selection"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"auto_indent"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"auto_match_enabled"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"binary_file_patterns"</span><span class="token operator">:</span>
+    <span class="token punctuation">[</span>
+        <span class="token string">"*.jpg"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.jpeg"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.png"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.gif"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.ttf"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.tga"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.dds"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.ico"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.eot"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.pdf"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.swf"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.jar"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.zip"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"bold_folder_labels"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"caret_extra_bottom"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">"caret_extra_top"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">"caret_extra_width"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">"caret_style"</span><span class="token operator">:</span> <span class="token string">"smooth"</span><span class="token punctuation">,</span>
+    <span class="token property">"close_windows_when_empty"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"color_scheme"</span><span class="token operator">:</span> <span class="token string">"Packages/User/SublimeLinter/Monokai (SL).tmTheme"</span><span class="token punctuation">,</span>
+    <span class="token property">"copy_with_empty_selection"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"create_window_at_startup"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"default_encoding"</span><span class="token operator">:</span> <span class="token string">"UTF-8"</span><span class="token punctuation">,</span>
+    <span class="token property">"default_line_ending"</span><span class="token operator">:</span> <span class="token string">"unix"</span><span class="token punctuation">,</span>
+    <span class="token property">"detect_indentation"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"dictionary"</span><span class="token operator">:</span> <span class="token string">"Packages/Language - English/en_US.dic"</span><span class="token punctuation">,</span>
+    <span class="token property">"drag_text"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"draw_centered"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"draw_indent_guides"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"draw_minimap_border"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"draw_white_space"</span><span class="token operator">:</span> <span class="token string">"selection"</span><span class="token punctuation">,</span>
+    <span class="token property">"enable_hexadecimal_encoding"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"enable_tab_scrolling"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"enable_telemetry"</span><span class="token operator">:</span> <span class="token string">"auto"</span><span class="token punctuation">,</span>
+    <span class="token property">"ensure_newline_at_eof_on_save"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"fade_fold_buttons"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"fallback_encoding"</span><span class="token operator">:</span> <span class="token string">"Western (Windows 1252)"</span><span class="token punctuation">,</span>
+    <span class="token property">"file_exclude_patterns"</span><span class="token operator">:</span>
+    <span class="token punctuation">[</span>
+        <span class="token string">"*.pyc"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.pyo"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.exe"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.dll"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.obj"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.o"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.a"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.lib"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.so"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.dylib"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.ncb"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.sdf"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.suo"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.pdb"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.idb"</span><span class="token punctuation">,</span>
+        <span class="token string">".DS_Store"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.class"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.psd"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.db"</span><span class="token punctuation">,</span>
+        <span class="token string">"*.sublime-workspace"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"find_selected_text"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"fold_buttons"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"folder_exclude_patterns"</span><span class="token operator">:</span>
+    <span class="token punctuation">[</span>
+        <span class="token string">".svn"</span><span class="token punctuation">,</span>
+        <span class="token string">".git"</span><span class="token punctuation">,</span>
+        <span class="token string">".hg"</span><span class="token punctuation">,</span>
+        <span class="token string">"CVS"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"font_face"</span><span class="token operator">:</span> <span class="token string">"Courier New"</span><span class="token punctuation">,</span>
+    <span class="token property">"font_options"</span><span class="token operator">:</span>
+    <span class="token punctuation">[</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"font_size"</span><span class="token operator">:</span> <span class="token number">14</span><span class="token punctuation">,</span>
+    <span class="token property">"gpu_window_buffer"</span><span class="token operator">:</span> <span class="token string">"auto"</span><span class="token punctuation">,</span>
+    <span class="token property">"gutter"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"highlight_line"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"highlight_modified_tabs"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"hot_exit"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"ignored_packages"</span><span class="token operator">:</span>
+    <span class="token punctuation">[</span>
+        <span class="token string">"Vintage"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"indent_guide_options"</span><span class="token operator">:</span>
+    <span class="token punctuation">[</span>
+        <span class="token string">"draw_normal"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"indent_subsequent_lines"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"indent_to_bracket"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"index_exclude_patterns"</span><span class="token operator">:</span>
+    <span class="token punctuation">[</span>
+        <span class="token string">"*.log"</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"index_files"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"index_workers"</span><span class="token operator">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token property">"line_numbers"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"line_padding_bottom"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">"line_padding_top"</span><span class="token operator">:</span> <span class="token number">2</span><span class="token punctuation">,</span>
+    <span class="token property">"margin"</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+    <span class="token property">"match_brackets"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"match_brackets_angle"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"match_brackets_braces"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"match_brackets_content"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"match_brackets_square"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"match_selection"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"match_tags"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"move_to_limit_on_up_down"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"open_files_in_new_window"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"overlay_scroll_bars"</span><span class="token operator">:</span> <span class="token string">"system"</span><span class="token punctuation">,</span>
+    <span class="token property">"preview_on_click"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"remember_full_screen"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"rulers"</span><span class="token operator">:</span>
+    <span class="token punctuation">[</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"save_on_focus_lost"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"scroll_past_end"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"scroll_speed"</span><span class="token operator">:</span> <span class="token number">1.0</span><span class="token punctuation">,</span>
+    <span class="token property">"shift_tab_unindent"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"show_encoding"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"show_full_path"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"show_line_endings"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"show_panel_on_build"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"show_tab_close_buttons"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"smart_indent"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"spell_check"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"spelling_selector"</span><span class="token operator">:</span> <span class="token string">"markup.raw, source string.quoted - punctuation - meta.preprocessor.c.include, source comment - source comment.block.preprocessor, -(source, constant, keyword, storage, support, variable, markup.underline.link, meta.tag)"</span><span class="token punctuation">,</span>
+    <span class="token property">"tab_completion"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"tab_size"</span><span class="token operator">:</span> <span class="token number">4</span><span class="token punctuation">,</span>
+    <span class="token property">"theme"</span><span class="token operator">:</span> <span class="token string">"Default.sublime-theme"</span><span class="token punctuation">,</span>
+    <span class="token property">"translate_tabs_to_spaces"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"tree_animation_enabled"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"trim_automatic_white_space"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"trim_trailing_white_space_on_save"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"update_check"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"use_simple_full_screen"</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    <span class="token property">"use_tab_stops"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"word_separators"</span><span class="token operator">:</span> <span class="token string">"./\\()\"</span>'-<span class="token operator">:</span><span class="token punctuation">,</span>.<span class="token punctuation">;</span>&lt;>~!@#$%^&amp;*|+=<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">{</span><span class="token punctuation">}</span>`~?"<span class="token punctuation">,</span>
+    <span class="token property">"word_wrap"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"wrap_width"</span><span class="token operator">:</span> <span class="token number">0</span>
+<span class="token punctuation">}</span></code></pre>
+<h2 id="五、PHP开发插件："><a href="#五、PHP开发插件：" class="headerlink" title="五、PHP开发插件："></a>五、PHP开发插件：</h2><ul>
+<li>smarty     <a href="https://github.com/amitsnyderman/sublime-smarty.git" target="_blank" rel="noopener">https://github.com/amitsnyderman/sublime-smarty.git</a></li>
+<li>代码片段 <a href="https://github.com/gerardroche/sublime-php-snippets" target="_blank" rel="noopener">https://github.com/gerardroche/sublime-php-snippets</a></li>
+</ul>
+<h2 id="六、goto跳转设置："><a href="#六、goto跳转设置：" class="headerlink" title="六、goto跳转设置："></a>六、goto跳转设置：</h2><ul>
+<li>Linux - create “Default (Linux).sublime-mousemap” in ~/.config/sublime-text-3/Packages/User</li>
+<li>Mac - create “Default (OSX).sublime-mousemap” in ~/Library/Application Support/Sublime Text 3/Packages/User</li>
+<li>Win - create “Default (Windows).sublime-mousemap” in %appdata%\Sublime Text 3\Packages\User</li>
+</ul>
+<pre class=" language-json"><code class="language-json"><span class="token punctuation">[</span>
+    <span class="token punctuation">{</span>
+        <span class="token property">"button"</span><span class="token operator">:</span> <span class="token string">"button1"</span><span class="token punctuation">,</span>
+        <span class="token property">"count"</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>
+        <span class="token property">"modifiers"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"ctrl"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token property">"press_command"</span><span class="token operator">:</span> <span class="token string">"drag_select"</span><span class="token punctuation">,</span>
+        <span class="token property">"command"</span><span class="token operator">:</span> <span class="token string">"goto_definition"</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">]</span></code></pre>
+<h2 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h2><p>待续…</p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ul>
+<li><a href="https://nicesu.gitbooks.io/sublime-text-guide/content/index.html" target="_blank" rel="noopener">Sublime Text Guide</a></li>
+</ul>
+<h4 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ:"></a>FAQ:</h4><ol>
+<li>Sublime Text 3 安装包失败，提示 Host codeload.github.com returned an invalid certificate,修复方式如下:<pre class=" language-json"><code class="language-json"><span class="token punctuation">{</span>
+ <span class="token property">"bootstrapped"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+ <span class="token property">"debug"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+ <span class="token property">"installed_packages"</span><span class="token operator">:</span>
+ <span class="token punctuation">[</span>
+     <span class="token string">"Package Control"</span>
+ <span class="token punctuation">]</span><span class="token punctuation">,</span>
+ <span class="token property">"downloader_precedence"</span><span class="token operator">:</span>
+ <span class="token punctuation">{</span>
+     <span class="token property">"linux"</span><span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token string">"curl"</span><span class="token punctuation">,</span> <span class="token string">"urllib"</span><span class="token punctuation">,</span>    <span class="token string">"wget"</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+     <span class="token property">"osx"</span><span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token string">"curl"</span><span class="token punctuation">,</span> <span class="token string">"urllib"</span> <span class="token punctuation">]</span><span class="token punctuation">,</span>
+     <span class="token property">"windows"</span><span class="token operator">:</span> <span class="token punctuation">[</span> <span class="token string">"wininet"</span> <span class="token punctuation">]</span>
+ <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span></code></pre>
+</li>
+</ol>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Weijian Ye</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://vzina.github.io/2020/07/06/sublime-text-3-cha-jian-pei-zhi-php-kai-fa/">https://vzina.github.io/2020/07/06/sublime-text-3-cha-jian-pei-zhi-php-kai-fa/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Weijian Ye</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/php/">
+                                    <span class="chip bg-color">php</span>
+                                </a>
+                            
+                                <a href="/tags/sublime/">
+                                    <span class="chip bg-color">sublime</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2020/07/06/sublime-text-3-cha-jian-pei-zhi-php-kai-fa/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="sublime text 3 插件配置(PHP开发)">
+                        
+                        <span class="card-title">sublime text 3 插件配置(PHP开发)</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            打造高效开发的sublime开发工具（PHP开发）。。。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/php/">
+                        <span class="chip bg-color">php</span>
+                    </a>
+                    
+                    <a href="/tags/sublime/">
+                        <span class="chip bg-color">sublime</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/07/06/ubuntu-18-04-kai-fa-huan-jing-pei-zhi/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="ubuntu 18.04开发环境配置">
+                        
+                        <span class="card-title">ubuntu 18.04开发环境配置</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            一个较完整的、支持多版本的php ubuntu 18.04开发环境。。。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-07-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E5%B7%A5%E5%85%B7/" class="post-category">
+                                    工具
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/linux/">
+                        <span class="chip bg-color">linux</span>
+                    </a>
+                    
+                    <a href="/tags/ubuntu/">
+                        <span class="chip bg-color">ubuntu</span>
+                    </a>
+                    
+                    <a href="/tags/php/">
+                        <span class="chip bg-color">php</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">Weijian Ye</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/vzina" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:yeweijian299@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=891718689" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 891718689" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
